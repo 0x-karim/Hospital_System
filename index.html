@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital System</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="hospital pb-2">
+        <div class="container text-center d-flex flex-column mb-4">
+            <h1 class="fw-medium mt-4 mb-4 pt-2 pb-3 rounded-3">Hospital System</h1>
+
+            <div class="row mb-5">
+                <div class="col-6 px-2">
+                    <div class="actionn rounded-4 py-5 position-relative">
+                        <div class="title rounded-3">
+                            <h3 class="mb-0 pb-3 w-100 fw-medium"> Add Patient </h3>
+                        </div>
+
+                        <form id="addPatientForm">
+                            <div class="site-form text-start pb-4 px-4 ">
+                                <select id="specializationInput" class="form-control border-0 mb-3 fw-medium">
+                                    <option selected value="#"> Enter Specialization : </option>
+                                    <option value="1">Children</option>
+                                    <option value="2">Surgery</option>
+                                    <option value="3">Cardiology</option>
+                                    <option value="4">Neurology</option>
+                                    <option value="5">Orthopedics</option>
+                                    <option value="6">Dermatology</option>
+                                    <option value="7">Gastroenterology</option>
+                                    <option value="8">Gynecology</option>
+                                    <option value="9">Oncology</option>
+                                    <option value="10">Ophthalmology</option>
+                                    <option value="11">Psychiatry</option>
+                                    <option value="12">Radiology</option>
+                                    <option value="13">Urology</option>
+                                    <option value="14">Nephrology</option>
+                                    <option value="15">Pulmonology</option>
+                                    <option value="16">Rheumatology</option>
+                                    <option value="17">Endocrinology</option>
+                                    <option value="18">Hematology</option>
+                                    <option value="19">Infectious Disease</option>
+                                    <option value="20">General Medicine</option>
+                                </select>
+                                <input id="patientNameInput" type="text" name="Patient Name" class="form-control border-0 mb-3" placeholder="Patient Name">
+                                <select id="patientStatus" name="Patient Statu" class="form-control border-0 fw-medium">
+                                    <option value="#">Enter Status :</option>
+                                    <option value="0">Regular</option>
+                                    <option value="1">Urgent</option>
+                                </select>
+                            </div>
+
+                            <div class="Choices d-flex justify-content-center px-3">
+                                <div class="click mx-2 w-50 position-relative">
+                                    <button class="btn btn-darck-blue w-100 h-100 rounded-2 position-relative fw-semibold">
+                                        <p class="position-relative z-3 p-0 m-0 text-capitalize">add new patient</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-6 px-2">
+                    <div class="actionn rounded-4 py-5 position-relative mb-5 h-100">
+                        <div class="title rounded-3">
+                            <h3 class="mb-0 pb-3 w-100 fw-medium"> Display Patients </h3>
+                        </div>
+
+                        <form id="displayForm">
+                            <div class="site-form text-start pb-4 px-4 ">
+                                <select id="displayInput" class="form-control border-0 mb-3 fw-medium">
+                                    <option selected value="#">Enter Specialization :</option>
+                                    <option value="1">Children</option>
+                                    <option value="2">Surgery</option>
+                                    <option value="3">Cardiology</option>
+                                    <option value="4">Neurology</option>
+                                    <option value="5">Orthopedics</option>
+                                    <option value="6">Dermatology</option>
+                                    <option value="7">Gastroenterology</option>
+                                    <option value="8">Gynecology</option>
+                                    <option value="9">Oncology</option>
+                                    <option value="10">Ophthalmology</option>
+                                    <option value="11">Psychiatry</option>
+                                    <option value="12">Radiology</option>
+                                    <option value="13">Urology</option>
+                                    <option value="14">Nephrology</option>
+                                    <option value="15">Pulmonology</option>
+                                    <option value="16">Rheumatology</option>
+                                    <option value="17">Endocrinology</option>
+                                    <option value="18">Hematology</option>
+                                    <option value="19">Infectious Disease</option>
+                                    <option value="20">General Medicine</option>
+                                </select>
+                            </div>
+
+                            <div class="Choices d-flex justify-content-center px-3">
+                                <div class="click mx-2 w-50 position-relative">
+                                    <button class="btn btn-darck-blue w-100 h-100 rounded-2 position-relative fw-semibold">
+                                        <p class="position-relative z-3 p-0 m-0 text-capitalize">Display Patients</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="patients-list rounded-4 py-3 mb-5 d-none">
+                <h2 class="text-capitalize mt-2">patients list</h2>
+                <div class="specilize rounded-2 py-4 px-5">
+                    <table class="w-100 bg-white rounded-3">
+                        <thead>
+                            <th class="py-3 w-25">Patient Name</th>
+                            <th class="py-3 w-25">Patient Status</th>
+                            <th class="py-3 w-25">Pickup</th>
+                        </thead>
+                        <tbody> </tbody>
+                        <tfoot> </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <button id="exitButton" class="btn btn-danger w-25 mx-auto fs-5 fw-bold">Exit</button>
+        </div>
+
+        <div id="alertMessage" class="message h-100 w-100 d-flex justify-content-center align-items-center d-none">
+            <div class="container d-flex justify-content-center align-items-center">
+                <div class="alert-message rounded-4 px-5 py-4">
+                    <div class="message-header w-100 d-flex justify-content-between">
+                        <div class="circles d-flex justify-content-center align-items-center">
+                            <span class="bg-danger rounded-circle me-2"></span>
+                            <span class="bg-warning rounded-circle me-2"></span>
+                            <span class="bg-success rounded-circle me-2"></span>
+                        </div>
+                        <div class="close">
+                            <button id="closeBtn" class="border-0 bg-inherit">
+                                <i class="fa-solid fa-xmark fs-3"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="message-body py-5"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

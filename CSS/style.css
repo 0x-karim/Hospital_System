@@ -1,0 +1,151 @@
+body {
+    background: rgb(65, 90, 119);
+}
+
+.main-font {
+    font-family: "PT Sans Caption", sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;   
+}
+
+::-webkit-scrollbar-track {
+    background-color: #415a77;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #023047;
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #001c2b;
+}
+
+.container h1  {
+    font-family: "Pacifico", cursive;
+    color: #003049;
+    font-size: 50px;
+    position: relative;
+    margin-inline: auto;
+    width: 50%;
+}
+
+.bg-inherit {
+    background-color: inherit;
+}
+
+.container .actionn, .patients-list{
+    border-inline: #00a5cf 7px solid;
+    box-shadow: 7px 7px 25px #2c3d51,
+                -7px -7px 25px #587aa1;
+}
+
+.container .actionn .title h3 , h4 , h2{
+    font-family: "Righteous", sans-serif;
+    font-size: 27px;
+    background-image: linear-gradient(to right , rgb(0, 66, 141) , rgb(0, 255, 234));
+    background-clip: text;
+    color: transparent;
+}
+
+.form-control {
+    background-color: #edf2f4;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+::placeholder {
+    font-weight: 500;
+    color: rgb(131, 131, 131) !important;
+}
+
+.click {
+    background: #415a77;
+    height: 40px;
+
+}
+
+.btn-darck-blue {
+    border: #e8cd02 2px solid;
+    color: #e8cd02 !important;
+    transition: all 0s 0.25s;
+}
+
+.click:hover .btn-darck-blue {
+    border: #e8cd02 2px solid;
+    color: #163382 !important;
+    transition: 0s;
+}
+
+.btn-darck-blue::after {
+    content: ' ';
+    position: absolute;
+    background-color: #e8cd02;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 100%;
+    z-index: 2;
+    transition: all 0.4s;
+}
+
+.click:hover .btn-darck-blue::after {
+    right: 50%;
+}
+
+.btn-darck-blue::before {
+    content: ' ';
+    position: absolute;
+    background-color: #e8cd02;
+    top: 0;
+    left: 100%;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    transition: all 0.4s;
+}
+
+.click:hover .btn-darck-blue::before {
+    left: 50%;
+}
+
+.container .data .table {
+    vertical-align: baseline;
+}
+
+.message {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+.message .container .alert-message {
+    font-family: "Bree Serif", serif;
+    box-sizing: border-box;
+    background-color: rgba(65, 90, 119);
+    box-shadow: 0px 0px 20px rgb(196, 193, 36) inset;
+    background-color: rgba(65, 90, 119);
+    animation: flash 1s infinite alternate;
+}
+
+@keyframes flash {
+    0%{box-shadow: 0 0 0px rgb(196, 193, 36) inset;}
+    100%{box-shadow: 0 0 20px rgb(196, 193, 36) inset;}
+}
+
+.message .container .alert-message .message-header {
+    width: 600px;
+}
+
+.message .container .message-header .circles span {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
